@@ -1,0 +1,32 @@
+{
+  "name": "vite-plugin-change-jsx-factory",
+  "version": "1.0.0",
+  "description": "A vite plugin to change the jsx factory",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mendlero/rollup-vite-plugins.git",
+    "directory": "packages/vite-plugin-change-jsx-factory"
+  },
+  "keywords": [
+    "rollup-plugin",
+    "vite-plugin"
+  ],
+  "author": "Omer M",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mendlero/rollup-vite-plugins/issues"
+  },
+  "homepage": "https://github.com/mendlero/rollup-vite-plugins#readme",
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0"
+  }
+}
