@@ -8,7 +8,7 @@ A simple vite plugin to change the jsx factory of esbuild.
 
 ## usage
 
-To use this plugin with an already existing package that exports a createElement you should pass the package name to the plugin like this:
+To use this plugin with an already existing package that exports a `createElement` function you should pass the package name to the plugin like this:
 
 ```js
 // vite.config.js
@@ -21,7 +21,7 @@ export default defineConfig({
 });
 ```
 
-or alternatively, you could create your own createElement function and pass it to the plugin:
+or alternatively, you could create your own `createElement` function and pass it to the plugin:
 
 ```js
 // vite.config.js

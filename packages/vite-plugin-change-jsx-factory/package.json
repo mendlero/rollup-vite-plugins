@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-change-jsx-factory",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A vite plugin to change the jsx factory",
   "main": "dist/index.js",
   "files": [
