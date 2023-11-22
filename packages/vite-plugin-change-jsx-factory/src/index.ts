@@ -1,5 +1,21 @@
 import { Plugin } from 'vite';
 
+// I know that this is not constant but naming stuff in programming is the hardest thing to do!
+function constantSettings(packageName: string): Omit<Plugin, 'name'> {
+  return {
+    enforce: 'post',
+    config(config) {
+      if (config.esbuild === undefined) {
+        config.esbuild = {};
+      }
+      if (config.esbuild !== false) {
+        config.esbuild.jsxFactory = packageName;
+      }
+      return config;
+    },
+  };
+}
+
 /**
  *
  * @param newFactory - The new jsx factory, should be a name of a module exporting a function createElement or a createElement function, see https://esbuild.github.io/api/#jsx-factory.
@@ -9,15 +25,7 @@ function changeJSXFactory(newFactory: Function | string): Plugin {
   if (typeof newFactory === 'string') {
     return {
       name: `Change JSX factory to ${newFactory}`,
-      config(config) {
-        if (config.esbuild === undefined) {
-          config.esbuild = {};
-        }
-        if (config.esbuild !== false) {
-          config.esbuild.jsxFactory = newFactory;
-        }
-        return config;
-      },
+      ...constantSettings(newFactory),
     };
   }
 
@@ -37,15 +45,7 @@ function changeJSXFactory(newFactory: Function | string): Plugin {
         return `export const createElement = ${newFactory.toString()}`;
       }
     },
-    config(config) {
-      if (config.esbuild === undefined) {
-        config.esbuild = {};
-      }
-      if (config.esbuild !== false) {
-        config.esbuild.jsxFactory = virtualModuleId;
-      }
-      return config;
-    },
+    ...constantSettings(virtualModuleId),
   };
 }
 
