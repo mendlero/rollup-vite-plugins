@@ -4,8 +4,7 @@ import reactPlugin, {
 } from '@vitejs/plugin-react';
 
 export interface Options {
-  exludeReactPlugin?: boolean;
-  reactPluginSettings: reactPluginOptions;
+  reactPluginSettings?: Omit<reactPluginOptions, 'jsxImportSource'>;
 }
 
 export default function reactPlusVue(
@@ -14,10 +13,6 @@ export default function reactPlusVue(
   const reactVuePlugin: Plugin = {
     name: 'React plus vue',
   };
-
-  if (options.exludeReactPlugin) {
-    return reactVuePlugin;
-  }
 
   return [reactPlugin(options.reactPluginSettings), reactVuePlugin];
 }
