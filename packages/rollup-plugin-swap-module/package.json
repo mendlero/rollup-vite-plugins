@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-swap-module",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A rollup plugin to swap a module for another",
   "main": "dist/index.js",
   "files": [
