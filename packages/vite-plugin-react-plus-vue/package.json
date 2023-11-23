@@ -1,0 +1,39 @@
+{
+  "name": "vite-plugin-react-plus-vue",
+  "version": "0.0.0",
+  "description": "A vite plugin to enable some vue features in react",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mendlero/rollup-vite-plugins.git",
+    "directory": "packages/vite-plugin-react-plus-vue"
+  },
+  "keywords": [
+    "rollup-plugin",
+    "vite-plugin",
+    "react",
+    "vue"
+  ],
+  "author": "Omer M",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mendlero/rollup-vite-plugins/issues"
+  },
+  "homepage": "https://github.com/mendlero/rollup-vite-plugins#readme",
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "@types/react": "^18.2.38",
+    "@vitejs/plugin-react": "^4.2.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
