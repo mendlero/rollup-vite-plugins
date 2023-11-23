@@ -1,4 +1,4 @@
-import { Plugin } from 'vite';
+import { Plugin } from 'rollup';
 
 export default function swapModule(module1: string, module2: string): Plugin {
   return {
