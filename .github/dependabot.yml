@@ -30,3 +30,13 @@ updates:
       include: scope
     target-branch: main
     versioning-strategy: increase
+  - package-ecosystem: npm
+    directory: /packages/rollup-plugin-options-wrappers
+    open-pull-requests-limit: 1000
+    schedule:
+      interval: daily
+    commit-message:
+      prefix: 'rollup-plugin-options-wrappers dependencies'
+      include: scope
+    target-branch: main
+    versioning-strategy: increase
