@@ -1,0 +1,32 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    open-pull-requests-limit: 1000
+    schedule:
+      interval: daily
+    commit-message:
+      prefix: 'root dependencies'
+      include: scope
+    target-branch: main
+    versioning-strategy: increase
+  - package-ecosystem: npm
+    directory: /packages/rollup-plugin-swap-module
+    open-pull-requests-limit: 1000
+    schedule:
+      interval: daily
+    commit-message:
+      prefix: 'rollup-plugin-swap-module dependencies'
+      include: scope
+    target-branch: main
+    versioning-strategy: increase
+  - package-ecosystem: npm
+    directory: /packages/vite-plugin-change-jsx-factory
+    open-pull-requests-limit: 1000
+    schedule:
+      interval: daily
+    commit-message:
+      prefix: 'vite-plugin-change-jsx-factory dependencies'
+      include: scope
+    target-branch: main
+    versioning-strategy: increase
