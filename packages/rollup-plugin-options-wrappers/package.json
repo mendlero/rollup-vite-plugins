@@ -1,0 +1,32 @@
+{
+  "name": "rollup-plugin-options-wrappers",
+  "version": "1.0.0",
+  "description": "A rollup plugin that wrapps the rollup plugin options",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mendlero/rollup-vite-plugins.git",
+    "directory": "packages/rollup-plugin-options-wrappers"
+  },
+  "keywords": [
+    "rollup-plugin",
+    "vite-plugin"
+  ],
+  "author": "Omer M",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mendlero/rollup-vite-plugins/issues"
+  },
+  "homepage": "https://github.com/mendlero/rollup-vite-plugins#readme",
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "rollup": "^4.5.1",
+    "typescript": "^5.2.2"
+  }
+}
