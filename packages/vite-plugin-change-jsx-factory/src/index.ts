@@ -1,7 +1,6 @@
 import { Plugin } from 'vite';
 
-// I know that this is not constant but naming stuff in programming is the hardest thing to do!
-function constantSettings(packageName: string): Omit<Plugin, 'name'> {
+function addConfigSettings(packageName: string): Omit<Plugin, 'name'> {
   return {
     enforce: 'post',
     config(config) {
@@ -25,7 +24,7 @@ function changeJSXFactory(newFactory: Function | string): Plugin {
   if (typeof newFactory === 'string') {
     return {
       name: `Change JSX factory to ${newFactory}`,
-      ...constantSettings(newFactory),
+      ...addConfigSettings(newFactory),
     };
   }
 
@@ -45,7 +44,7 @@ function changeJSXFactory(newFactory: Function | string): Plugin {
         return `export const createElement = ${newFactory.toString()}`;
       }
     },
-    ...constantSettings(virtualModuleId),
+    ...addConfigSettings(virtualModuleId),
   };
 }
 
