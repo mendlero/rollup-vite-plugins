@@ -27,6 +27,6 @@
   "devDependencies": {
     "@types/node": "^20.9.0",
     "rollup": "^4.16.4",
-    "typescript": "^5.2.2"
+    "typescript": "^5.4.5"
   }
 }
